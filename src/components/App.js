@@ -1,16 +1,17 @@
 import React from 'react';
+import Standings from './Standings';
 
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-    this.state = {
-                standings: [],
-                date:null,
-                season:null,
-                league:null,
-                division:null
-            };
+        this.state = {
+                    standings: [],
+                    date:null,
+                    season:null,
+                    league:null,
+                    division:null
+                };
 
         this.state.standings=this.foobar();
     }
@@ -19,7 +20,7 @@ class App extends React.Component {
         console.log(this.state.standings);
         return (
             <div className= "ui container" style={{marginTop:'10px'}}>
-                Marty
+                <Standings data={this.state.standings}/>
             </div>
         );
     }
