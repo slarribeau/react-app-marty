@@ -14,13 +14,15 @@ const Standings = (props) => {
     const x = props.data.map((standing) => {
         return (
             <div>
-                {standing}
+                {standing.League}  {standing.Division}  {standing.Team}
             </div>
         );
     });
-
+    console.log(x)
     return(
-        <div>WTF</div>
+        <div>WTF
+        {x}
+        </div>
     );
 }
 
