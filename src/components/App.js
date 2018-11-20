@@ -20,7 +20,7 @@ class App extends React.Component {
         //console.log(this.state.standings);
         return (
             <div className= "ui container" style={{marginTop:'10px'}}>
-                <Standings data={this.state.standings}/>
+                <Standings data={this.state}/>
             </div>
         );
     }

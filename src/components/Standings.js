@@ -10,8 +10,12 @@ const Standings = (props) => {
                 division:null
             };
 */
+    //var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    //const result = words.filter(word => word.length > 6);
 
-    const x = props.data.map((standing) => {
+    const result = props.data.standings.filter(x => x.Date==='2018-3-29');
+
+    const x = result.map((standing) => {
         return (
             <div>
                 {standing.League}  {standing.Division}  {standing.Team}
