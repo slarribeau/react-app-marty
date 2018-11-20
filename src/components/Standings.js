@@ -2,23 +2,14 @@ import React from 'react';
 
 
 const Standings = (props) => {
-/*    state = {
-                standings: [],
-                date:null,
-                season:null,
-                league:null,
-                division:null
-            };
-*/
-    //var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-    //const result = words.filter(word => word.length > 6);
+    const result = props.data.standings.filter(x => x.Date === props.data.date);
+    const result2 = result.filter(x => x.League === props.data.league);
+    const result3 = result2.filter(x => x.Division === props.data.division);
 
-    const result = props.data.standings.filter(x => x.Date==='2018-3-29');
-
-    const x = result.map((standing) => {
+    const x = result3.map((standing) => {
         return (
             <div>
-                {standing.League}  {standing.Division}  {standing.Team}
+                {standing.Team} {standing.W} {standing.L} {standing.GB} {standing.PCT}
             </div>
         );
     });

@@ -14,6 +14,9 @@ class App extends React.Component {
                 };
 
         this.state.standings=this.foobar();
+        this.state.date='2018-3-29';
+        this.state.league="AL";
+        this.state.division="EAST"
     }
     
     render() {
