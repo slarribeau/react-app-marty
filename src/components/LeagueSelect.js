@@ -6,14 +6,9 @@ const sortBy = [
   { value: 'NL', label: 'National League' },
 ]
 
-//class LeagueSelect extends Component {
 const LeagueSelect = (props) => {
-    console.log("scott")
-    console.log(props)
-    console.log("robert")
-    //props.onLeagueSelect();
     return (
-      <div className="sort">
+      <div>
         Order by <Selectbox options={sortBy} handleOnChange={props.onLeagueSelect} />
       </div>
     );
