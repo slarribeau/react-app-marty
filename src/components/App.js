@@ -1,6 +1,6 @@
 import React from 'react';
 import Standings from './Standings';
-import Sort from './LeagueSelect';
+import LeagueSelect from './LeagueSelect';
 
 
 
@@ -25,7 +25,7 @@ class App extends React.Component {
         //console.log(this.state.standings);
         return (
             <div className= "ui container" style={{marginTop:'10px'}}>
-                <Sort />
+                <LeagueSelect />
                 <Standings data={this.state}/>
             </div>
         );

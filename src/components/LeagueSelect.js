@@ -6,7 +6,7 @@ const sortBy = [
   { value: 'NL', label: 'National League' },
 ]
 
-class Sort extends Component {
+class LeagueSelect extends Component {
 
   handleSort = (value) => {
     console.log(value)
@@ -22,4 +22,4 @@ class Sort extends Component {
   }
 }
 
-export default Sort;
+export default LeagueSelect;
