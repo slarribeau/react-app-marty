@@ -21,15 +21,20 @@ class App extends React.Component {
         this.state.division="EAST"
     }
     
+    testFunction(x)
+    {
+        console.log("testFunction-in")
+        console.log(x)
+        console.log("testFunction-out")
+    }
+
     render() {
         //console.log(this.state.standings);
         return (
             <div className= "ui container" style={{marginTop:'10px'}}>
                 <LeagueSelect 
-                    onLeageSelect={selectedLeage => {
-                        this.setState({selectedLeage}) 
-                        }
-                    }
+                    foo={this.state.league}
+                    onLeagueSelect={this.testFunction}
                 />
                 <Standings data={this.state}/>
             </div>
@@ -37,6 +42,10 @@ class App extends React.Component {
     }
 }
 
+//onLeageSelect={selectedLeage => {
+//    this.setState({selectedLeage}) 
+//    }
+//}
 
 const foobar = [
     {"League":"AL", "Division":"EAST", "Team":"NYY", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  

@@ -8,6 +8,10 @@ const sortBy = [
 
 //class LeagueSelect extends Component {
 const LeagueSelect = (props) => {
+    console.log("scott")
+    console.log(props)
+    console.log("robert")
+
     return (
       <div className="sort">
         Order by <Selectbox options={sortBy} handleOnChange={props.onLeagueSelect} />

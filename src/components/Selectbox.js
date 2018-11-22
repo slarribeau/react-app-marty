@@ -14,8 +14,9 @@ class Selectbox extends Component {
 
   render() {
     const { classes, options } = this.props;
-    console.log(classes);
-    console.log(options);
+    console.log("lisa");
+    console.log(this.props)
+    console.log("renee");
 
 
     return (
