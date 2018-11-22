@@ -15,43 +15,24 @@ class App extends React.Component {
                     division:null
                 };
 
-        this.state.standings=foobar;
+        this.state.standings=rawData;
         this.state.date='2018-3-29';
         this.state.league="AL";
         this.state.division="EAST"
     }
     
-    testFunction = (league) => 
-    {
-        console.log("testFunction-in")
-        console.log(league)
-        this.setState({league:league}) 
-        console.log("testFunction-out")
-    }
-
+    setLeague = (league) => { this.setState({league:league}) }
     render() {
-        //console.log(this.state.standings);
         return (
-            <div className= "ui container" style={{marginTop:'10px'}}>
-                <LeagueSelect 
-                /*onLeageSelect={() => console.log("awesome")} */
-                  onLeagueSelect={this.testFunction}
-                />
+            <div>
+                <LeagueSelect onLeagueSelect={this.setLeague}/>
                 <Standings data={this.state}/>
             </div>
         );
     }
 }
-/*
-onLeageSelect={selectedLeage => {
-    this.setState({selectedLeage}) 
-    }
-}
 
-onLeagueSelect={this.testFunction}
-
-*/
-const foobar = [
+const rawData = [
     {"League":"AL", "Division":"EAST", "Team":"NYY", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
     {"League":"AL", "Division":"EAST", "Team":"TBR", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
     {"League":"AL", "Division":"EAST", "Team":"BAL", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
