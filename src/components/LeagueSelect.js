@@ -11,7 +11,7 @@ const LeagueSelect = (props) => {
     console.log("scott")
     console.log(props)
     console.log("robert")
-
+    //props.onLeagueSelect();
     return (
       <div className="sort">
         Order by <Selectbox options={sortBy} handleOnChange={props.onLeagueSelect} />
