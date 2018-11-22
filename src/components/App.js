@@ -25,12 +25,18 @@ class App extends React.Component {
         //console.log(this.state.standings);
         return (
             <div className= "ui container" style={{marginTop:'10px'}}>
-                <LeagueSelect />
+                <LeagueSelect 
+                    onLeageSelect={selectedLeage => {
+                        this.setState({selectedLeage}) 
+                        }
+                    }
+                />
                 <Standings data={this.state}/>
             </div>
         );
     }
 }
+
 
 const foobar = [
     {"League":"AL", "Division":"EAST", "Team":"NYY", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
