@@ -10,7 +10,6 @@ class LeagueSelect extends Component {
 
   handleSort = (value) => {
     console.log(value)
-    //this.props.updateSort(value);
   }
 
   render() {
