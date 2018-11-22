@@ -1,6 +1,6 @@
 import React from 'react';
 import Standings from './Standings';
-import Sort from './Sort';
+import Sort from './LeagueSelect';
 
 
 
