@@ -5,7 +5,6 @@ const sortBy = [
   { value: 'WEST', label: 'Western' },
   { value: 'CENT', label: 'Central' },
   { value: 'EAST', label: 'Eastern' },
-
 ]
 
 const DivisionSelect = (props) => {

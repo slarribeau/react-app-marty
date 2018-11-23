@@ -15,7 +15,7 @@ class App extends React.Component {
                     season:null,
                     league:null,
                     division:null,
-                    startDate: new Date()
+                    startDate:null,
 
                 };
 
@@ -23,28 +23,22 @@ class App extends React.Component {
         this.state.date='2018-3-29';
         this.state.league="AL";
         this.state.division="WEST"
+        this.state.startDate=new Date("2018/3/29");
     }
 
-    handleChange(date) {
-        this.setState({
-          startDate: date
-        });
-    }
-    
     setLeague = (league) =>     {this.setState({league:league})};
     setDivision = (division) => {this.setState({division:division})};
     handleChange = (date) =>    {this.setState({startDate:date})};
-
     render() {
         return (
             <div>
+                {this.state.startDate.toString()}
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
                 <DivisionSelect onDivisionSelect={this.setDivision}/>
                 <DatePicker
                     selected={this.state.startDate}
                     onChange={this.handleChange}
-                />
-
+                /> 
                 <Standings data={this.state}/>
             </div>
         );
