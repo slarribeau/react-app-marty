@@ -5,7 +5,6 @@ import DivisionSelect from './DivisionSelect';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -29,9 +28,20 @@ class App extends React.Component {
     setLeague = (league) =>     {this.setState({league:league})};
     setDivision = (division) => {this.setState({division:division})};
     handleChange = (date) =>    {this.setState({startDate:date})};
+
+    dateObject2String(date) {
+        let dateString = date.getFullYear() + "-";
+        dateString += date.getMonth()+1 + "-";
+        dateString += date.getDate();
+        console.log(dateString)
+        return dateString;
+      }
+
     render() {
         return (
             <div>
+                {this.dateObject2String(this.state.startDate)}
+                <br/>
                 {this.state.startDate.toString()}
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
                 <DivisionSelect onDivisionSelect={this.setDivision}/>
