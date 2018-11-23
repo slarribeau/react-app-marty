@@ -4,23 +4,20 @@ import LeagueSelect from './LeagueSelect';
 import DivisionSelect from './DivisionSelect';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import {DateUtilitiesService} from '../services/date-utilities.service'
+
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
                     standings: [],
-                    date:null,
-                    season:null,
                     league:null,
                     division:null,
                     startDate:null,
-
                 };
 
         this.state.standings=rawData;
-        //this.state.date='2018-3-29';
-        this.state.date=new Date("2018/3/29")
         this.state.league="AL";
         this.state.division="WEST"
         this.state.startDate=new Date("2018/3/29");
@@ -30,18 +27,11 @@ class App extends React.Component {
     setDivision = (division) => {this.setState({division:division})};
     handleChange = (date) =>    {this.setState({startDate:date})};
 
-    dateObject2String(date) {
-        let dateString = date.getFullYear() + "-";
-        dateString += date.getMonth()+1 + "-";
-        dateString += date.getDate();
-        console.log(dateString)
-        return dateString;
-      }
-
     render() {
+        const dateUtil = new DateUtilitiesService();
         return (
             <div>
-                {this.dateObject2String(this.state.startDate)}
+                {dateUtil.dateObject2String(this.state.startDate)}
                 <br/>
                 {this.state.startDate.toString()}
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
