@@ -19,7 +19,8 @@ class App extends React.Component {
                 };
 
         this.state.standings=rawData;
-        this.state.date='2018-3-29';
+        //this.state.date='2018-3-29';
+        this.state.date=new Date("2018/3/29")
         this.state.league="AL";
         this.state.division="WEST"
         this.state.startDate=new Date("2018/3/29");
