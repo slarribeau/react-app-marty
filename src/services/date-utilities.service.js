@@ -6,4 +6,18 @@ export class DateUtilitiesService {
         console.log(dateString)
         return dateString;
       }
+
+    getPrevDayObject(inDate)  {
+        let myDate = new Date(inDate);
+        let dateOffset = (24*60*60*1000) * 1; //1 days
+        myDate.setTime(myDate.getTime() - dateOffset);
+        return myDate;
+      }
+
+    getNextDayObject(inDate) {
+        let myDate = new Date(inDate);
+        let dateOffset = (24*60*60*1000) * 1; //1 days
+        myDate.setTime(myDate.getTime() + dateOffset);
+        return myDate;
+      }
 }

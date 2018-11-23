@@ -21,39 +21,36 @@ class App extends React.Component {
         this.state.league="AL";
         this.state.division="WEST"
         this.state.startDate=new Date("2018/3/29");
+        this.dateUtil = new DateUtilitiesService();
+
     }
 
     setLeague = (league)     => {this.setState({league:league})};
     setDivision = (division) => {this.setState({division:division})};
-    handleChange = (date)    => {this.setState({startDate:date})};
-    foo = (x)                => {console.log(x)};
+    handleDateChange = (date)=> {this.setState({startDate:date})};
+    handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
+    handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
+
     render() {
-        const dateUtil = new DateUtilitiesService();
         return (
             <div>
-                {dateUtil.dateObject2String(this.state.startDate)}
+                {this.dateUtil.dateObject2String(this.state.startDate)}
                 <br/>
                 {this.state.startDate.toString()}
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
                 <DivisionSelect onDivisionSelect={this.setDivision}/>
+                <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
                 <DatePicker
                     selected={this.state.startDate}
-                    onChange={this.handleChange}
+                    onChange={this.handleDateChange}
                 /> 
-                <button onClick={()=>this.foo(7)}>-</button>
+                <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                 <Standings data={this.state}/>
             </div>
         );
     }
 }
-/*
-<button 
-className="ui button primary"
-onClick={()=> this.props.selectSong(song)}
->
-Select
-</button>
-*/
+
 const rawData = [
     {"League":"AL", "Division":"EAST", "Team":"NYY", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
     {"League":"AL", "Division":"EAST", "Team":"TBR", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
