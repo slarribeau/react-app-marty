@@ -2,7 +2,8 @@ import React from 'react';
 import Standings from './Standings';
 import LeagueSelect from './LeagueSelect';
 import DivisionSelect from './DivisionSelect';
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 class App extends React.Component {
@@ -13,7 +14,9 @@ class App extends React.Component {
                     date:null,
                     season:null,
                     league:null,
-                    division:null
+                    division:null,
+                    startDate: new Date()
+
                 };
 
         this.state.standings=rawData;
@@ -21,15 +24,27 @@ class App extends React.Component {
         this.state.league="AL";
         this.state.division="WEST"
     }
+
+    handleChange(date) {
+        this.setState({
+          startDate: date
+        });
+    }
     
-    setLeague = (league) => { this.setState({league:league}) }
-    setDivision = (division) => { this.setState({division:division}) }
+    setLeague = (league) =>     {this.setState({league:league})};
+    setDivision = (division) => {this.setState({division:division})};
+    handleChange = (date) =>    {this.setState({startDate:date})};
 
     render() {
         return (
             <div>
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
                 <DivisionSelect onDivisionSelect={this.setDivision}/>
+                <DatePicker
+                    selected={this.state.startDate}
+                    onChange={this.handleChange}
+                />
+
                 <Standings data={this.state}/>
             </div>
         );
