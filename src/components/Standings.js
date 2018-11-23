@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Standings = (props) => {
     const result = props.data.standings.filter(x => x.Date === props.data.date);
     const result2 = result.filter(x => x.League === props.data.league);
@@ -15,7 +14,7 @@ const Standings = (props) => {
     });
     console.log(x)
     return(
-        <div>WTF
+        <div>
         {x}
         </div>
     );

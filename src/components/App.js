@@ -1,6 +1,7 @@
 import React from 'react';
 import Standings from './Standings';
 import LeagueSelect from './LeagueSelect';
+import DivisionSelect from './DivisionSelect';
 
 
 
@@ -18,14 +19,17 @@ class App extends React.Component {
         this.state.standings=rawData;
         this.state.date='2018-3-29';
         this.state.league="AL";
-        this.state.division="EAST"
+        this.state.division="WEST"
     }
     
     setLeague = (league) => { this.setState({league:league}) }
+    setDivision = (division) => { this.setState({division:division}) }
+
     render() {
         return (
             <div>
                 <LeagueSelect onLeagueSelect={this.setLeague}/>
+                <DivisionSelect onDivisionSelect={this.setDivision}/>
                 <Standings data={this.state}/>
             </div>
         );
