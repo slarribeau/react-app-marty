@@ -45,7 +45,12 @@ class App extends React.Component {
                     onChange={this.handleDateChange}
                 /> 
                 <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
-                <Standings data={this.state}/>
+                <Standings 
+                   standings={this.state.standings}
+                   league={this.state.leftLeague}
+                   division={this.state.leftDivision}
+                   startDate={this.state.startDate}
+                />
             </div>
         );
     }
