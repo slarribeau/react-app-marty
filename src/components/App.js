@@ -12,21 +12,21 @@ class App extends React.Component {
         super(props);
         this.state = {
                     standings: [],
-                    league:null,
-                    division:null,
+                    leftLeague:null,
+                    leftDivision:null,
                     startDate:null,
                 };
 
         this.state.standings=rawData;
-        this.state.league="AL";
-        this.state.division="WEST"
+        this.state.leftLeague="AL";
+        this.state.leftDivision="WEST"
         this.state.startDate=new Date("2018/3/29");
         this.dateUtil = new DateUtilitiesService();
 
     }
 
-    setLeague = (league)     => {this.setState({league:league})};
-    setDivision = (division) => {this.setState({division:division})};
+    setLeague = (leftLeague)     => {this.setState({leftLeague:leftLeague})};
+    setDivision = (leftDivision) => {this.setState({leftDivision:leftDivision})};
     handleDateChange = (date)=> {this.setState({startDate:date})};
     handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
