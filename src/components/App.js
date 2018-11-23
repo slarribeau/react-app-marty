@@ -23,10 +23,10 @@ class App extends React.Component {
         this.state.startDate=new Date("2018/3/29");
     }
 
-    setLeague = (league) =>     {this.setState({league:league})};
+    setLeague = (league)     => {this.setState({league:league})};
     setDivision = (division) => {this.setState({division:division})};
-    handleChange = (date) =>    {this.setState({startDate:date})};
-
+    handleChange = (date)    => {this.setState({startDate:date})};
+    foo = (x)                => {console.log(x)};
     render() {
         const dateUtil = new DateUtilitiesService();
         return (
@@ -40,12 +40,20 @@ class App extends React.Component {
                     selected={this.state.startDate}
                     onChange={this.handleChange}
                 /> 
+                <button onClick={()=>this.foo(7)}>-</button>
                 <Standings data={this.state}/>
             </div>
         );
     }
 }
-
+/*
+<button 
+className="ui button primary"
+onClick={()=> this.props.selectSong(song)}
+>
+Select
+</button>
+*/
 const rawData = [
     {"League":"AL", "Division":"EAST", "Team":"NYY", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
     {"League":"AL", "Division":"EAST", "Team":"TBR", "W":"1",  "L":"0",  "PCT":"1.000",  "GB":"--",  "Date":"2018-3-29"},  
