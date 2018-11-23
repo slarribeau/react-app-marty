@@ -14,19 +14,25 @@ class App extends React.Component {
                     standings: [],
                     leftLeague:null,
                     leftDivision:null,
+                    rightLeague:null,
+                    righttDivision:null,
                     startDate:null,
                 };
 
         this.state.standings=rawData;
         this.state.leftLeague="AL";
         this.state.leftDivision="WEST"
+        this.state.rightLeague="NL";
+        this.state.rightDivision="WEST"
         this.state.startDate=new Date("2018/3/29");
         this.dateUtil = new DateUtilitiesService();
 
     }
 
-    setLeague = (leftLeague)     => {this.setState({leftLeague:leftLeague})};
-    setDivision = (leftDivision) => {this.setState({leftDivision:leftDivision})};
+    setLeftLeague = (leftLeague)     => {this.setState({leftLeague:leftLeague})};
+    setLeftDivision = (leftDivision) => {this.setState({leftDivision:leftDivision})};
+    setRightLeague = (rightLeague)     => {this.setState({rightLeague:rightLeague})};
+    setRightDivision = (rightDivision) => {this.setState({rightDivision:rightDivision})};
     handleDateChange = (date)=> {this.setState({startDate:date})};
     handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
@@ -34,21 +40,36 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                {this.dateUtil.dateObject2String(this.state.startDate)}
-                <br/>
-                {this.state.startDate.toString()}
-                <LeagueSelect onLeagueSelect={this.setLeague}/>
-                <DivisionSelect onDivisionSelect={this.setDivision}/>
-                <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                 <DatePicker
                     selected={this.state.startDate}
                     onChange={this.handleDateChange}
                 /> 
-                <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
+                <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                {this.dateUtil.dateObject2String(this.state.startDate)}
+                <br/>
+                {this.state.startDate.toString()}
+                <br/>
+                Left
+                <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
+                Left
+                <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
+
                 <Standings 
                    standings={this.state.standings}
                    league={this.state.leftLeague}
                    division={this.state.leftDivision}
+                   startDate={this.state.startDate}
+                />
+                Right
+                <LeagueSelect onLeagueSelect={this.setRightLeague}/>
+                Right
+                <DivisionSelect onDivisionSelect={this.setRightDivision}/>
+
+                <Standings 
+                   standings={this.state.standings}
+                   league={this.state.rightLeague}
+                   division={this.state.rightDivision}
                    startDate={this.state.startDate}
                 />
             </div>

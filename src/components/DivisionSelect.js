@@ -10,7 +10,7 @@ const sortBy = [
 const DivisionSelect = (props) => {
     return (
       <div>
-        Order by <Selectbox options={sortBy} handleOnChange={props.onDivisionSelect} />
+            <Selectbox options={sortBy} handleOnChange={props.onDivisionSelect} />
       </div>
     );
 }
