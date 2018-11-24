@@ -43,20 +43,21 @@ class App extends React.Component {
         return (
             <div>
                 <div id="banner">
-                <a href="/"> 
-                   <img src={banner} alt="baseball scene"></img>
-                </a>
+                    <a href="/"> 
+                    <img src={banner} alt="baseball scene"></img>
+                    </a>
                 </div>
-                <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
-                <DatePicker
-                    selected={this.state.startDate}
-                    onChange={this.handleDateChange}
-                /> 
-                <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                {this.dateUtil.dateObject2String(this.state.startDate)}
-                <br/>
-                {this.state.startDate.toString()}
-                <br/>
+                <div id="menu"> 
+                    <div id="center">
+                        <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
+                        <DatePicker
+                            selected={this.state.startDate}
+                            onChange={this.handleDateChange}
+                        /> 
+                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                    </div>
+                </div>
+
                 Left
                 <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
                 Left
