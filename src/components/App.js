@@ -5,6 +5,8 @@ import DivisionSelect from './DivisionSelect';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {DateUtilitiesService} from '../services/date-utilities.service'
+import "./app.component.css"
+import banner from "./baseball-player-action-shot.jpg"
 
 
 class App extends React.Component {
@@ -40,6 +42,11 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <div id="banner">
+                <a href="/"> 
+                   <img src={banner} alt="baseball scene"></img>
+                </a>
+                </div>
                 <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                 <DatePicker
                     selected={this.state.startDate}
