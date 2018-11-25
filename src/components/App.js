@@ -58,28 +58,37 @@ class App extends React.Component {
                     </div>
                 </div>
 
-                Left
-                <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
-                Left
-                <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
+                <div id="left">
+                    <div class="content">
+                        Left
+                        <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
+                        Left
+                        <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
 
-                <Standings 
-                   standings={this.state.standings}
-                   league={this.state.leftLeague}
-                   division={this.state.leftDivision}
-                   startDate={this.state.startDate}
-                />
-                Right
-                <LeagueSelect onLeagueSelect={this.setRightLeague}/>
-                Right
-                <DivisionSelect onDivisionSelect={this.setRightDivision}/>
+                        <Standings 
+                            standings={this.state.standings}
+                            league={this.state.leftLeague}
+                            division={this.state.leftDivision}
+                            startDate={this.state.startDate}
+                        />
+                    </div>
+                </div>
 
-                <Standings 
-                   standings={this.state.standings}
-                   league={this.state.rightLeague}
-                   division={this.state.rightDivision}
-                   startDate={this.state.startDate}
-                />
+                <div id="right">
+                    <div class="content">
+                        Right
+                        <LeagueSelect onLeagueSelect={this.setRightLeague}/>
+                        Right
+                        <DivisionSelect onDivisionSelect={this.setRightDivision}/>
+
+                        <Standings 
+                            standings={this.state.standings}
+                            league={this.state.rightLeague}
+                            division={this.state.rightDivision}
+                            startDate={this.state.startDate}
+                        />
+                    </div>
+                </div>
             </div>
         );
     }
