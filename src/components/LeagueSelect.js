@@ -8,9 +8,9 @@ const sortBy = [
 
 const LeagueSelect = (props) => {
     return (
-      <div>
+      <span>
         <Selectbox options={sortBy} handleOnChange={props.onLeagueSelect} />
-      </div>
+      </span>
     );
 }
 

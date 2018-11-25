@@ -9,9 +9,9 @@ const sortBy = [
 
 const DivisionSelect = (props) => {
     return (
-      <div>
+      <span>
             <Selectbox options={sortBy} handleOnChange={props.onDivisionSelect} />
-      </div>
+      </span>
     );
 }
 

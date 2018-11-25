@@ -9,11 +9,10 @@ class Selectbox extends Component {
   }
 
   render() {
-
     return (
-      <select onChange={ (e) => this.onChange(e) }>
-        {this.createOptions(this.props.options)}
-      </select>
+        <select onChange={ (e) => this.onChange(e) }>
+          {this.createOptions(this.props.options)}
+        </select>   
     );
   }
 }

@@ -12,7 +12,6 @@ import twitter from "../assets/iconmonstr-twitter-4.svg"
 import instagram from "../assets/iconmonstr-instagram-14.svg"
 import linkedin from "../assets/iconmonstr-linkedin-4.svg"
 
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -63,12 +62,11 @@ class App extends React.Component {
                 </div>
 
                 <div id="left">
-                    <div class="content">
-                        Left
-                        <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
-                        Left
-                        <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
-
+                    <div className="content">
+                        <span>
+                            <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
+                            <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
+                        </span>
                         <Standings 
                             standings={this.state.standings}
                             league={this.state.leftLeague}
@@ -79,12 +77,11 @@ class App extends React.Component {
                 </div>
 
                 <div id="right">
-                    <div class="content">
-                        Right
-                        <LeagueSelect onLeagueSelect={this.setRightLeague}/>
-                        Right
-                        <DivisionSelect onDivisionSelect={this.setRightDivision}/>
-
+                    <div className="content">
+                        <span>
+                            <LeagueSelect onLeagueSelect={this.setRightLeague}/>
+                            <DivisionSelect onDivisionSelect={this.setRightDivision}/>
+                        </span>
                         <Standings 
                             standings={this.state.standings}
                             league={this.state.rightLeague}
