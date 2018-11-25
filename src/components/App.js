@@ -6,7 +6,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {DateUtilitiesService} from '../services/date-utilities.service'
 import "./app.component.css"
-import banner from "./baseball-player-action-shot.jpg"
+import banner from "../assets/baseball-player-action-shot.jpg"
+import facebook from "../assets/iconmonstr-facebook-4.svg"
+import twitter from "../assets/iconmonstr-twitter-4.svg"
+import instagram from "../assets/iconmonstr-instagram-14.svg"
+import linkedin from "../assets/iconmonstr-linkedin-4.svg"
 
 
 class App extends React.Component {
@@ -89,7 +93,62 @@ class App extends React.Component {
                         />
                     </div>
                 </div>
+
+
+                <div id="footer"> 
+                    <a href="https://www.facebook.com/slarribeau" target="_blank">
+                        <img src={facebook} alt="Follow me on facebook"></img>
+                    </a>
+
+                    <a href="https://www.twitter.com/slarribeau" target="_blank">
+                        <img src={twitter} alt="Follow me on twitter"></img>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/scottlarribeau" target="_blank">
+                        <img src={linkedin} alt="Follow me on instagram"></img>
+                    </a>
+
+                    <a href="https://www.instagram.com/slarribeau463" target="_blank">
+                        <img src={instagram} alt="Follow me on linked-in"></img>
+                    </a>
+                
+                    <div class="advert1">
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B00008RW9U&asins=B00008RW9U&linkId=ec2a803818e73f1df3dbab2a8189b318&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B01DKCE4C4&asins=B01DKCE4C4&linkId=00ad10b1d76401b0852274f6ed5c1951&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B078WST5P8&asins=B078WST5P8&linkId=95e734cf1d6572a1be2dc8f52f5e1307&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe> 
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B018UQ5AMS&asins=B018UQ5AMS&linkId=6ae9de59c51bad77d6dc7640bbecb781&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe> 
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B07BSXV8SX&asins=B07BSXV8SX&linkId=3dcc1c37589a666b04227e266735b4aa&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B00BWFIKJA&asins=B00BWFIKJA&linkId=a6ecbd921839c867521049ec3bae3384&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B017HVSKRY&asins=B017HVSKRY&linkId=ee7261056f2f285f15b6bfc73ad4b29f&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B013BKPVSQ&asins=B013BKPVSQ&linkId=2bd01d6937a590ce7b54bace1349c05f&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B00VB9MM5A&asins=B00VB9MM5A&linkId=3e548be939d7d7f9f83db22fdb580690&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B0054WGRBA&asins=B0054WGRBA&linkId=3970b724e71936fac9dac4c4ab4180a2&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+
+                        <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B06XKN4Z7H&asins=B06XKN4Z7H&linkId=5907acfa48e32fe981b03cc9885d72f8&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+                    </div>                
+                </div>
             </div>
+
         );
     }
 }
