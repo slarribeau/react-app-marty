@@ -41,11 +41,7 @@ class App extends React.Component {
     handleDateChange = (date)=> {this.setState({startDate:date})};
     handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
-/*
-                        <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
-                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
 
-*/
     render() {
         return (
             <div>
@@ -56,12 +52,12 @@ class App extends React.Component {
                 </div>
                 <div id="menu"> 
                     <div className="center">
-                        <button className="left-button">+</button>
+                        <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                         <DatePicker id="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
-                        <button className="right-button">+</button>
+                        <button className="right-button"  onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
                     </div>
                 </div>
 
