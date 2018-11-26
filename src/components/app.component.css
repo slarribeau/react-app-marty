@@ -11,21 +11,23 @@
   }
   
   td {
-    height:25px;
+    /*height:25px;
     font-family:Helvetica; 
     text-align:right;
-    font-size: 15px;
+    font-size: 15px;*/
   }
   th {
-    font-family:Helvetica; 
+    /*font-family:Helvetica; 
     text-align:right;
-    font-size: 15px;
+    font-size: 15px;*/
   }
   table {
-    width:430px;
+    margin: 0 auto;
+
+    /*width:430px;
     display:block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
   }
 
   #banner {
@@ -87,7 +89,7 @@
   .center_the_standings {
     margin: auto;
     width: 80%;
-    /*border: 3px solid #73AD21;*/
+    border: 3px solid #73AD21;
     padding: 10px; 
     text-align: center; /* children will be centered */
   }
