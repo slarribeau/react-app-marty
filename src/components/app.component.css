@@ -7,17 +7,17 @@
   }
   
   body {
-    font-family: Arial, monospace;
+    font-family: Helvetica;
   }
   
   td {
     height:25px;
-    font-family:monospace;
+    font-family:Helvetica; 
     text-align:right;
     font-size: 15px;
   }
   th {
-    font-family:monospace;
+    font-family:Helvetica; 
     text-align:right;
     font-size: 15px;
   }
@@ -80,13 +80,14 @@
   
   .standings {
     background-color: orange;
-    height:200px;
+    height:220px;
+    border: 1px solid black;
   }
 
   .center_the_standings {
     margin: auto;
-    width: 40%;
-    border: 3px solid #73AD21;
+    width: 80%;
+    /*border: 3px solid #73AD21;*/
     padding: 10px; 
     text-align: center; /* children will be centered */
   }
