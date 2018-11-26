@@ -95,21 +95,23 @@ class App extends React.Component {
                 </div>
 
                 <div id="footer"> 
+                    <div id="social_icons">
                     <a href="https://www.facebook.com/slarribeau" target="_blank">
-                        <img src={facebook} alt="Follow me on facebook"></img>
+                        <img className="social_icon" src={facebook} alt="Follow me on facebook"></img>
                     </a>
 
                     <a href="https://www.twitter.com/slarribeau" target="_blank">
-                        <img src={twitter} alt="Follow me on twitter"></img>
+                        <img className="social_icon" src={twitter} alt="Follow me on twitter"></img>
                     </a>
 
                     <a href="https://www.linkedin.com/in/scottlarribeau" target="_blank">
-                        <img src={linkedin} alt="Follow me on instagram"></img>
+                        <img className="social_icon" src={linkedin} alt="Follow me on instagram"></img>
                     </a>
 
                     <a href="https://www.instagram.com/slarribeau463" target="_blank">
-                        <img src={instagram} alt="Follow me on linked-in"></img>
-                    </a>           
+                        <img className="social_icon" src={instagram} alt="Follow me on linked-in"></img>
+                    </a>     
+                    </div>      
                 </div>
             </div>
 
