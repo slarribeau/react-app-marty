@@ -27,19 +27,16 @@
     margin-left: auto;
     margin-right: auto;
   }
-  button.left-button {
-    top:-9px; 
+
+  #banner {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
   }
-  button.right-button {
-    top: -9px;
-  }
-  button {
-    background-color: yellow;
-    position:relative;
-  }
-  #date {
-    margin: 0px 3px 0px 3px; 
-    background-color: yellow;
+  
+  #menu {
+    background-color: green;
+    height:60px;
   }
 
   .center {
@@ -50,12 +47,25 @@
     text-align: center; /* children will be centered */
   }
 
-  #banner {
-    width: 100%;
-    height: 100%;
-    max-height: 300px;
+  button {
+    background-color: yellow;
+    position:relative;
   }
-    
+
+  button.left-button {
+    top:-9px; 
+  }
+  button.right-button {
+    top: -9px;
+  }
+
+  #date {
+    margin: 0px 3px 0px 3px; 
+    background-color: yellow;
+  }
+
+
+
   #left {
     content: "";
     clear: both;
@@ -64,32 +74,17 @@
     float:left;
   }
     
-  #menu {
-    background-color: green;
-    height:60px;
-  }
-  
-  .menu-items {
-    list-style-type:none;
-    padding-left:0;
-  }
-  
-  .menu-item {
-    display: inline;
-    padding: 5px 5px; 
-    cursor: pointer; /* Pointer/hand icon */
-    color: white; /* White text */
-    text-decoration: underline;
-  }
+
+    
+  #right {
+    margin: 0 0 0 64%;
+  } 
   
   .content {
     background-color: orange;
     height:200px;
   }
-    
-  #right {
-    margin: 0 0 0 64%;
-  }  
+
   .advert1 {
     background-color: white;
     height:240px;
