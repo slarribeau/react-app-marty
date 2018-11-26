@@ -28,22 +28,17 @@
     margin-right: auto;
   }
   button.left-button {
-    float:left;
-    top:10px; 
-    left:38px;
-    background-color: yellow;
+    top:-9px; 
   }
   button.right-button {
-    float:right;
-    top: 11px;
-    left:-36px;
+    top: -9px;
   }
   button {
     background-color: yellow;
     position:relative;
   }
   #date {
-    margin: 10px 0px 0px 0px;
+    margin: 0px 3px 0px 3px; 
     background-color: yellow;
   }
 
