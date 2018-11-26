@@ -41,7 +41,11 @@ class App extends React.Component {
     handleDateChange = (date)=> {this.setState({startDate:date})};
     handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
+/*
+                        <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
+                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
 
+*/
     render() {
         return (
             <div>
@@ -51,13 +55,13 @@ class App extends React.Component {
                     </a>
                 </div>
                 <div id="menu"> 
-                    <div id="center">
-                        <button onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
-                        <DatePicker
+                    <div className="center">
+                        <button className="left-button">+</button>
+                        <DatePicker id="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
-                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                        <button className="right-button">+</button>
                     </div>
                 </div>
 
@@ -109,7 +113,7 @@ class App extends React.Component {
                         <img src={instagram} alt="Follow me on linked-in"></img>
                     </a>
                 
-                    <div class="advert1">
+                    <div className="advert1">
                         <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B00008RW9U&asins=B00008RW9U&linkId=ec2a803818e73f1df3dbab2a8189b318&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
                         </iframe>
 
