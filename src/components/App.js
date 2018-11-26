@@ -51,7 +51,7 @@ class App extends React.Component {
                     </a>
                 </div>
                 <div id="menu"> 
-                    <div className="center">
+                    <div id="center_the_menu">
                         <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                         <DatePicker id="date"
                             selected={this.state.startDate}
@@ -62,32 +62,37 @@ class App extends React.Component {
                 </div>
 
                 <div id="left">
-                    <div className="content">
-                        <span>
-                            <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
-                            <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
-                        </span>
-                        <Standings 
-                            standings={this.state.standings}
-                            league={this.state.leftLeague}
-                            division={this.state.leftDivision}
-                            startDate={this.state.startDate}
-                        />
+                    <div className="standings">
+                        <div className="center_the_standings">
+                            <span>
+                                <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
+                                <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
+                            </span>
+                            <Standings 
+                                standings={this.state.standings}
+                                league={this.state.leftLeague}
+                                division={this.state.leftDivision}
+                                startDate={this.state.startDate}
+                            />
+                        </div>    
                     </div>
                 </div>
 
                 <div id="right">
-                    <div className="content">
-                        <span>
-                            <LeagueSelect onLeagueSelect={this.setRightLeague}/>
-                            <DivisionSelect onDivisionSelect={this.setRightDivision}/>
-                        </span>
-                        <Standings 
-                            standings={this.state.standings}
-                            league={this.state.rightLeague}
-                            division={this.state.rightDivision}
-                            startDate={this.state.startDate}
-                        />
+                    <div className="standings">
+                        <div className="center_the_standings">
+
+                            <span>
+                                <LeagueSelect onLeagueSelect={this.setRightLeague}/>
+                                <DivisionSelect onDivisionSelect={this.setRightDivision}/>
+                            </span>
+                            <Standings 
+                                standings={this.state.standings}
+                                league={this.state.rightLeague}
+                                division={this.state.rightDivision}
+                                startDate={this.state.startDate}
+                            />
+                        </div>
                     </div>
                 </div>
 

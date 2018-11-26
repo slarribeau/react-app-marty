@@ -39,7 +39,7 @@
     height:60px;
   }
 
-  .center {
+  #center_the_menu {
     margin: auto;
     width: 20%;
     border: 3px solid #73AD21;
@@ -70,19 +70,25 @@
     content: "";
     clear: both;
     display: table;
-    width:64%;
+    width:50%;
     float:left;
   }
-    
-
-    
+      
   #right {
-    margin: 0 0 0 64%;
+    margin: 0 0 0 50%;
   } 
   
-  .content {
+  .standings {
     background-color: orange;
     height:200px;
+  }
+
+  .center_the_standings {
+    margin: auto;
+    width: 40%;
+    border: 3px solid #73AD21;
+    padding: 10px; 
+    text-align: center; /* children will be centered */
   }
 
   .advert1 {
