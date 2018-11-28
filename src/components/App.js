@@ -8,10 +8,10 @@ import {DateUtilitiesService} from '../services/date-utilities.service'
 import "./app.component.css"
 //import banner from "../assets/baseball-player-action-shot.jpg"
 import banner from "../assets/coke2.jpg"
-import facebook from "../assets/iconmonstr-facebook-4.svg"
-import twitter from "../assets/iconmonstr-twitter-4.svg"
-import instagram from "../assets/iconmonstr-instagram-14.svg"
-import linkedin from "../assets/iconmonstr-linkedin-4.svg"
+import facebook from "../assets/iconmonstr-facebook-4-32.png"
+import twitter from "../assets/iconmonstr-twitter-4-32.png"
+import instagram from "../assets/iconmonstr-instagram-2-32.png"
+import linkedin from "../assets/iconmonstr-linkedin-4-32.png"
 
 class App extends React.Component {
     constructor(props) {
