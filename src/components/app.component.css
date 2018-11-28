@@ -31,7 +31,7 @@
 
   tr:nth-child(even) {
     background-color: rgb(154, 148, 204); /* clr 1 odd row */
-    background-color: white; /* clr 2 odd row */
+    background-color: rgb(241, 185, 101); /* clr 2 even row */
 
   }  
 
@@ -41,7 +41,7 @@
 
   tr {
     background-color: rgb(132, 124, 196); /* clr 1 even row */
-    background-color: white; /* clr 2 even row */
+    background-color: rgb(241, 185, 101); /* clr 2 even row */
 
   }
 
@@ -107,7 +107,6 @@
   .standings {
     background-color: rgb(205, 207, 207); /* clr 1 background */
     background-color: #00c8deff; /* clr 2 background */
-
     background-color: rgba(250, 217, 179, 0.856); /* clr 2 background */
     height:260px;
   }
