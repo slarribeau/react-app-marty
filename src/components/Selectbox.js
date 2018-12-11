@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import Select from 'react-select'
 
 class Selectbox extends Component {
 
-  createOptions = (options) => options.map( o => <option value={o.value} key={o.value}>{o.label}</option> );
-
   onChange = (e) => {
-    this.props.handleOnChange(e.target.value);
+    this.props.handleOnChange(e.value);
   }
 
   render() {
     return (
-        <select onChange={ (e) => this.onChange(e) }>
-          {this.createOptions(this.props.options)}
-        </select>   
+        <Select 
+          onChange={ (e) => this.onChange(e) }
+          defaultValue={this.props.options[0]}
+          options={this.props.options}
+        />   
     );
   }
 }
