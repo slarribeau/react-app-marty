@@ -53,7 +53,7 @@ class App extends React.Component {
                             onChange={this.handleDateChange}
                         /> 
                         <button className="right-button"  onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                        <button className="right-button"  onClick={()=>this.setState({startDate:new Date("2018-3-30")})}>Season End</button>
+                        <button className="right-button"  onClick={()=>this.setState({startDate:new Date("2018-9-30")})}>Season End</button>
                     </div>
                 </div>
 
