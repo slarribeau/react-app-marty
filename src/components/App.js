@@ -36,6 +36,7 @@ class App extends React.Component {
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
 
     render() {
+        console.log(this.state.startDate);
         return (
             <div>
                 <div id="banner">
@@ -45,14 +46,14 @@ class App extends React.Component {
                 </div>
                 <div id="menu"> 
                     <div id="center_the_menu">
-                        <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>Season Start</button>
+                        <button className="left-button" onClick={()=>this.setState({startDate:new Date("2018-3-29")})}>Season Start</button>
                         <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                         <DatePicker id="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
                         <button className="right-button"  onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                        <button className="right-button"  onClick={()=>this.handleDateIncr(this.state.startDate)}>Season End</button>
+                        <button className="right-button"  onClick={()=>this.setState({startDate:new Date("2018-3-30")})}>Season End</button>
                     </div>
                 </div>
 
