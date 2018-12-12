@@ -106,16 +106,24 @@
     background-color: rgba(250, 217, 179, 0.856); /* clr 2 background lite brown */
     background-color: rgb(241, 185, 101); /* clr 2 background  */
 
-    height:260px;
-    height:320px;
+    height:280px;
   }
 
   .center_the_standings {
     margin: auto;
-    width: 80%;
+    width: 85%;
     /*border: 3px solid #73AD21;*/
     padding: 10px; 
     text-align: center; /* children will be centered */
+  }
+  .select_box_a {
+    width:50%;
+    float: left;
+  }
+
+  .select_box_b {
+    width:50%;
+    float: right;
   }
 
   .advert1 {
@@ -138,10 +146,10 @@
 
   #social_icons {
     /* margin: auto; True Center */
-    margin: 0 0 0 35%; /* Skewed center */
+    margin: 0 0 0 30%; /* Skewed center */
     width:30%;
     text-align: center; /* children will be centered */
-    /* border: 3px solid #73AD21;  */
+    border: 3px solid #73AD21; 
     /*background-color: green; */
 
   }

@@ -57,10 +57,12 @@ class App extends React.Component {
                 <div id="left">
                     <div className="standings">
                         <div className="center_the_standings">
-                            <span>
+                            <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
+                            </div>
+                            <div className="select_box_b">
                                 <DivisionSelect onDivisionSelect={this.setLeftDivision}/>
-                            </span>
+                            </div>
                             <Standings 
                                 standings={this.state.standings}
                                 league={this.state.leftLeague}
@@ -75,10 +77,12 @@ class App extends React.Component {
                     <div className="standings">
                         <div className="center_the_standings">
 
-                            <span>
+                            <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setRightLeague}/>
+                            </div>
+                            <div className="select_box_b">
                                 <DivisionSelect onDivisionSelect={this.setRightDivision}/>
-                            </span>
+                            </div>
                             <Standings 
                                 standings={this.state.standings}
                                 league={this.state.rightLeague}
