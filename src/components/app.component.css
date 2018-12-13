@@ -20,20 +20,17 @@
     padding: 8px;
   }
   th {
+    background-color: #0097a7ff; /* clr 2 header */
     border: 1px solid #ddd;
     padding: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: rgb(62, 45, 212); /* clr 1 header */
-    background-color: #0097a7ff; /* clr 2 header */
     color: white;
   }
 
   tr:nth-child(even) {
-    background-color: rgb(154, 148, 204); /* clr 1 odd row */
     background-color: rgba(250, 217, 179, 0.856); /* clr 2 odd row */
-
   }  
 
   tr:hover {
@@ -41,9 +38,7 @@
   }
 
   tr {
-    background-color: rgb(132, 124, 196); /* clr 1 even row */
     background-color: rgba(250, 217, 179, 0.856); /* clr 2 even row */
-
   }
 
   table {
@@ -53,15 +48,16 @@
   }
 
   #banner {
+    margin:auto;
     width: 100%;
     height: 100%;
-    max-height: 200px;
+    max-height: 280px;
     overflow:hidden; 
-
+    text-align: center;
+    background-color: black;
   }
   
   #menu {
-    background-color: rgb(45, 123, 212); /*clr 1 menu */
     background-color: black; /*clr 2 menu */
     height:40px;
   }
@@ -89,6 +85,7 @@
   #left {
     float: left;
     width: 43%;
+    /* border: 3px solid red; */
   }
       
   #center {
@@ -99,20 +96,24 @@
   #right {
     float: left;
     width: 14%;
-    /*border: 3px solid red; */
+    /* border: 3px solid red; */
   }
   
   .standings {
     background-color: rgb(241, 185, 101); /* clr 2 background  */
-    height:280px;
+    height:360px;
+    /* border: 3px solid blue; */
   }
 
   .center_the_standings {
     margin: auto;
     width: 85%;
-    /*border: 3px solid #73AD21;*/
     padding: 10px; 
     text-align: center; /* children will be centered */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* border: 3px solid green; */
   }
   .select_box_a {
     width:50%;
@@ -126,11 +127,19 @@
 
   .advert1 {
     background-color: rgb(241, 185, 101); /* clr 2 background  */
-    height:280px;
-    margin: auto;
-    padding: 10px;
+    height:360px;
+    /* border: 3px solid blue; */
   }
   
+  .center_the_advert {
+    text-align: center; /* children will be centered */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);  
+    /* border: 3px solid green; */
+  }
+
+
   .advert2{
     background-color: brown;
     height:110px;
