@@ -36,12 +36,20 @@ class App extends React.Component {
 
     handleDateDecr(date, edgeDate) {
         let tmpNextDayObject = this.dateUtil.getPrevDayObject(date);
-        this.setState({menuDate:tmpNextDayObject});
+        if (tmpNextDayObject >= edgeDate) {
+           this.setState({menuDate:tmpNextDayObject});
+        } else {
+            alert("Cannot go past beginning of season");
+        }
     };
     
     handleDateIncr(date, edgeDate) {
         let tmpNextDayObject = this.dateUtil.getNextDayObject(date);
-        this.setState({menuDate:tmpNextDayObject})
+        if (tmpNextDayObject <= edgeDate) {
+            this.setState({menuDate:tmpNextDayObject})
+        } else {
+            alert("Cannot go past end of season");
+        }
     };
 
     render() {
