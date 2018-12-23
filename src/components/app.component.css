@@ -71,6 +71,9 @@
     transform: translateY(-50%);
     border: 3px solid green; 
   }
+  .date_box {
+    width:100%;
+  }
   .select_box_a {
     width:50%;
     float: left;

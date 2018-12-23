@@ -46,14 +46,14 @@ class App extends React.Component {
                 </div>
                 <div className="menu"> 
                     <div className="center_the_menu">
-                        <button  onClick={()=>this.setState({startDate:new Date("2018-3-29")})}>Season Start</button>
+                        <button  onClick={()=>this.setState({startDate:new Date("2018/3/29")})}>Season Start</button>
                         <button  onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                         <DatePicker className="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
                         <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                        <button onClick={()=>this.setState({startDate:new Date("2018-9-30")})}>Season End</button>
+                        <button onClick={()=>this.setState({startDate:new Date("2018/9/30")})}>Season End</button>
                     </div>
                 </div>
 
@@ -82,6 +82,9 @@ class App extends React.Component {
                 <div className="center">
                     <div className="standings">
                         <div className="center_the_standings">
+                            <div className="date_box">
+                              {this.dateUtil.dateObject2String(this.state.startDate)}
+                            </div>                        
                             <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setRightLeague}/>
                             </div>
