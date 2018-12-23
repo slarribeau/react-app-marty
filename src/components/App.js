@@ -7,7 +7,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import {DateUtilitiesService} from '../services/date-utilities.service';
 import './app.component.css';
 import {rawData} from '../services/dummyData';
-import banner from '../assets/coke3.jpg';
+import banner from '../assets/coke4.jpg';
 import facebook from '../assets/iconmonstr-facebook-4-32.png';
 import twitter from '../assets/iconmonstr-twitter-4-32.png';
 import instagram from '../assets/iconmonstr-instagram-2-32.png';
