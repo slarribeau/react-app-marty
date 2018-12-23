@@ -1,5 +1,6 @@
 import React from 'react';
 import {DateUtilitiesService} from '../services/date-utilities.service'
+import './Standings.css';
 
 
 
