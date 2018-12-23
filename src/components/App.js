@@ -34,7 +34,6 @@ class App extends React.Component {
     handleDateChange = (date)=> {this.setState({startDate:date})};
     handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
     handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
-//                            {this.dateUtil.dateObject2String(this.state.startDate)}
 
     render() {
         console.log(this.state.startDate);
@@ -61,6 +60,9 @@ class App extends React.Component {
                 <div className="left">
                     <div className="standings">
                         <div className="center_the_standings">
+                            <div className="date_box">
+                              {this.dateUtil.dateObject2String(this.state.startDate)}
+                            </div>
                             <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
                             </div>
