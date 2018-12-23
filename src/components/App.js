@@ -40,25 +40,25 @@ class App extends React.Component {
         console.log(this.state.startDate);
         return (
             <div>
-                <div id="banner">
+                <div className="banner">
                     <a href="/"> 
-                    <img src={banner} alt="baseball scene"></img>
+                    <img src={banner} alt="Baseball 2018 (React)"></img>
                     </a>
                 </div>
-                <div id="menu"> 
-                    <div id="center_the_menu">
-                        <button className="left-button" onClick={()=>this.setState({startDate:new Date("2018-3-29")})}>Season Start</button>
-                        <button className="left-button" onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
-                        <DatePicker id="date"
+                <div className="menu"> 
+                    <div className="center_the_menu">
+                        <button  onClick={()=>this.setState({startDate:new Date("2018-3-29")})}>Season Start</button>
+                        <button  onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
+                        <DatePicker className="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
-                        <button className="right-button"  onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                        <button className="right-button"  onClick={()=>this.setState({startDate:new Date("2018-9-30")})}>Season End</button>
+                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                        <button onClick={()=>this.setState({startDate:new Date("2018-9-30")})}>Season End</button>
                     </div>
                 </div>
 
-                <div id="left">
+                <div className="left">
                     <div className="standings">
                         <div className="center_the_standings">
                             <div className="select_box_a">
@@ -77,7 +77,7 @@ class App extends React.Component {
                     </div>
                 </div>
 
-                <div id="center">
+                <div className="center">
                     <div className="standings">
                         <div className="center_the_standings">
                             <div className="select_box_a">
@@ -95,7 +95,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div id="right">
+                <div className="right">
                     <div className="advert1">
                         <div className="center_the_advert">
                             <iframe style={{"width":"120px", "height": "240px"}} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=scottlarribea-20&marketplace=amazon&region=US&placement=B01DKCE4C4&asins=B01DKCE4C4&linkId=00ad10b1d76401b0852274f6ed5c1951&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
@@ -104,8 +104,8 @@ class App extends React.Component {
                     </div>
                 </div>
 
-                <div id="footer"> 
-                    <div id="social_icons">
+                <div className="footer"> 
+                    <div className="social_icons">
                     <a href="https://www.facebook.com/slarribeau" target="_blank">
                         <img className="social_icon" src={facebook} alt="Follow me on facebook"></img>
                     </a>
