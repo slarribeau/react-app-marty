@@ -68,6 +68,8 @@ class App extends React.Component {
                         <DatePicker className="date"
                             selected={this.state.menuDate}
                             onChange={this.handleDateChange}
+                            startDate={this.state.seasonStartDate}
+                            endDate={this.state.seasonEndDate}
                         /> 
                         <button onClick={()=>this.handleDateIncr(this.state.menuDate, this.seasonEndDate)}>+</button>
                         <button onClick={()=>this.setState({menuDate:this.seasonEndDate})}>Season End</button>

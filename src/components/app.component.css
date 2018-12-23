@@ -31,7 +31,7 @@
     width: 450px;
     padding: 10px; 
     text-align: center; /* children will be centered */
-    border: 3px solid #73AD21; 
+    /* border: 3px solid #73AD21; */
   }
 
   button {
@@ -138,10 +138,12 @@
     }
     .center_the_menu {
       border: 1px solid red; 
+      border:none;
     }
   }
   
   /* For mobile phones portrait mode: */
+  /*
   @media only screen and (max-width:500px) {
     .menu {
       border: 1px solid yellow; 
@@ -155,3 +157,4 @@
       float:none;
     }
   }
+  */
