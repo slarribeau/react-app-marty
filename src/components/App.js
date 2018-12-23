@@ -82,7 +82,7 @@ class App extends React.Component {
                                 standings={this.state.standings}
                                 league={this.state.leftLeague}
                                 division={this.state.leftDivision}
-                                startDate={this.state.menuDate}
+                                menuDate={this.state.menuDate}
                             />
                         </div>    
                     </div>
@@ -104,7 +104,7 @@ class App extends React.Component {
                                 standings={this.state.standings}
                                 league={this.state.rightLeague}
                                 division={this.state.rightDivision}
-                                startDate={this.state.menuDate}
+                                menuDate={this.state.menuDate}
                             />
                         </div>
                     </div>

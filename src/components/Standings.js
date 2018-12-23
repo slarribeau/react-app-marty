@@ -6,7 +6,7 @@ import './Standings.css';
 
 const Standings = (props) => {
     const dateUtil = new DateUtilitiesService();
-    const tmpDate = dateUtil.dateObject2String(props.startDate);
+    const tmpDate = dateUtil.dateObject2String(props.menuDate);
     const result = props.standings.filter(x => x.Date === tmpDate);
     const result2 = result.filter(x => x.League === props.league);
     const result3 = result2.filter(x => x.Division === props.division);
