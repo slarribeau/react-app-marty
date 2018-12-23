@@ -17,8 +17,9 @@
   
   .banner {
     width: 100%;
-    height: auto;
+    height: 250px;
     background-color: black;
+    overflow:hidden;
   }
   
   .menu {
@@ -32,7 +33,7 @@
     width: 40%;
     padding: 10px; 
     text-align: center; /* children will be centered */
-    /*border: 3px solid #73AD21; */
+    border: 3px solid #73AD21; 
   }
 
   button {
@@ -132,3 +133,24 @@
     margin:0px 10px 0px 10px;
   }
   
+  @media only screen and (max-width:800px) {
+    /* At 800 px (mobile landscape) we start to lose data in standings columns*/
+    .left, .center, .right {
+      width: 100%;
+    }
+  }
+  
+  /* For mobile phones portrait mode: */
+  @media only screen and (max-width:500px) {
+    .menu {
+      border: 1px solid yellow; 
+      height: 100px;
+    }
+    .center_the_menu {
+      border: 1px solid white; 
+    }
+    .left-button, .mat-form-field{
+      border: 1px solid green; 
+      float:none;
+    }
+  }
