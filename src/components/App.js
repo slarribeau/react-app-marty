@@ -25,27 +25,27 @@ class App extends React.Component {
                     leftDivision:"WEST",
                     rightLeague:"NL",
                     rightDivision:"WEST",
-                    startDate:this.seasonEndDate,
+                    menuDate:this.seasonEndDate,
                 };
     }
     setLeftLeague = (leftLeague)     => {this.setState({leftLeague:leftLeague})};
     setLeftDivision = (leftDivision) => {this.setState({leftDivision:leftDivision})};
     setRightLeague = (rightLeague)     => {this.setState({rightLeague:rightLeague})};
     setRightDivision = (rightDivision) => {this.setState({rightDivision:rightDivision})};
-    handleDateChange = (date)=> {this.setState({startDate:date})};
+    handleDateChange = (date)=> {this.setState({menuDate:date})};
 
     handleDateDecr(date, edgeDate) {
         let tmpNextDayObject = this.dateUtil.getPrevDayObject(date);
-        this.setState({startDate:tmpNextDayObject});
+        this.setState({menuDate:tmpNextDayObject});
     };
     
     handleDateIncr(date, edgeDate) {
         let tmpNextDayObject = this.dateUtil.getNextDayObject(date);
-        this.setState({startDate:tmpNextDayObject})
+        this.setState({menuDate:tmpNextDayObject})
     };
 
     render() {
-        console.log(this.state.startDate);
+        console.log(this.state.menuDate);
         return (
             <div>
                 <div className="banner">
@@ -55,14 +55,14 @@ class App extends React.Component {
                 </div>
                 <div className="menu"> 
                     <div className="center_the_menu">
-                        <button  onClick={()=>this.setState({startDate:this.seasonStartDate})}>Season Start</button>
-                        <button  onClick={()=>this.handleDateDecr(this.state.startDate, this.seasonStartDate)}>-</button>
+                        <button  onClick={()=>this.setState({menuDate:this.seasonStartDate})}>Season Start</button>
+                        <button  onClick={()=>this.handleDateDecr(this.state.menuDate, this.seasonStartDate)}>-</button>
                         <DatePicker className="date"
-                            selected={this.state.startDate}
+                            selected={this.state.menuDate}
                             onChange={this.handleDateChange}
                         /> 
-                        <button onClick={()=>this.handleDateIncr(this.state.startDate, this.seasonEndDate)}>+</button>
-                        <button onClick={()=>this.setState({startDate:this.seasonEndDate})}>Season End</button>
+                        <button onClick={()=>this.handleDateIncr(this.state.menuDate, this.seasonEndDate)}>+</button>
+                        <button onClick={()=>this.setState({menuDate:this.seasonEndDate})}>Season End</button>
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ class App extends React.Component {
                     <div className="standings">
                         <div className="center_the_standings">
                             <div className="date_box">
-                              {this.dateUtil.dateObject2String(this.state.startDate)}
+                              {this.dateUtil.dateObject2String(this.state.menuDate)}
                             </div>
                             <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setLeftLeague}/>
@@ -82,7 +82,7 @@ class App extends React.Component {
                                 standings={this.state.standings}
                                 league={this.state.leftLeague}
                                 division={this.state.leftDivision}
-                                startDate={this.state.startDate}
+                                startDate={this.state.menuDate}
                             />
                         </div>    
                     </div>
@@ -92,7 +92,7 @@ class App extends React.Component {
                     <div className="standings">
                         <div className="center_the_standings">
                             <div className="date_box">
-                              {this.dateUtil.dateObject2String(this.state.startDate)}
+                              {this.dateUtil.dateObject2String(this.state.menuDate)}
                             </div>                        
                             <div className="select_box_a">
                                 <LeagueSelect onLeagueSelect={this.setRightLeague}/>
@@ -104,7 +104,7 @@ class App extends React.Component {
                                 standings={this.state.standings}
                                 league={this.state.rightLeague}
                                 division={this.state.rightDivision}
-                                startDate={this.state.startDate}
+                                startDate={this.state.menuDate}
                             />
                         </div>
                     </div>
