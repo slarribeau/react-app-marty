@@ -16,24 +16,33 @@ import linkedin from '../assets/iconmonstr-linkedin-4-32.png';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.dateUtil = new DateUtilitiesService();
+        this.seasonStartDate = new Date(2018,2,29);
+        this.seasonEndDate = new Date(2018,8,30);
         this.state = {
                     standings: rawData,
                     leftLeague:"AL",
                     leftDivision:"WEST",
                     rightLeague:"NL",
                     rightDivision:"WEST",
-                    startDate:new Date("2018/3/29"),
+                    startDate:this.seasonEndDate,
                 };
-        this.dateUtil = new DateUtilitiesService();
     }
-
     setLeftLeague = (leftLeague)     => {this.setState({leftLeague:leftLeague})};
     setLeftDivision = (leftDivision) => {this.setState({leftDivision:leftDivision})};
     setRightLeague = (rightLeague)     => {this.setState({rightLeague:rightLeague})};
     setRightDivision = (rightDivision) => {this.setState({rightDivision:rightDivision})};
     handleDateChange = (date)=> {this.setState({startDate:date})};
-    handleDateDecr = (date)  => {this.setState({startDate:this.dateUtil.getPrevDayObject(date)})};
-    handleDateIncr = (date)  => {this.setState({startDate:this.dateUtil.getNextDayObject(date)})};
+
+    handleDateDecr(date) {
+        let tmpNextDayObject = this.dateUtil.getPrevtDayObject(date);
+        this.setState({startDate:tmpNextDayObject});
+    };
+    
+    handleDateIncr(date) {
+        let tmpNextDayObject = this.dateUtil.getNextDayObject(date);
+        this.setState({startDate:tmpNextDayObject})
+    };
 
     render() {
         console.log(this.state.startDate);
@@ -46,14 +55,14 @@ class App extends React.Component {
                 </div>
                 <div className="menu"> 
                     <div className="center_the_menu">
-                        <button  onClick={()=>this.setState({startDate:new Date("2018/3/29")})}>Season Start</button>
+                        <button  onClick={()=>this.setState({startDate:this.seasonStartDate})}>Season Start</button>
                         <button  onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
                         <DatePicker className="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
                         <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
-                        <button onClick={()=>this.setState({startDate:new Date("2018/9/30")})}>Season End</button>
+                        <button onClick={()=>this.setState({startDate:this.seasonEndDate})}>Season End</button>
                     </div>
                 </div>
 
