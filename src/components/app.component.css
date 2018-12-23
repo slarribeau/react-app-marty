@@ -28,7 +28,7 @@
   .center_the_menu {
     margin: auto; /* True Center */
     /*margin: 0 0 0 23%; /* Skewed center */
-    width: 40%;
+    width: 450px;
     padding: 10px; 
     text-align: center; /* children will be centered */
     border: 3px solid #73AD21; 
