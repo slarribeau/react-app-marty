@@ -58,7 +58,7 @@ class App extends React.Component {
             <div>
                 <div className="banner">
                     <a href="/"> 
-                    <img src={banner} alt="Baseball 2018 (React)"></img>
+                    <img src={banner} style={{"width":"100%"}} alt="Baseball 2018 (React)"></img>
                     </a>
                 </div>
                 <div className="menu"> 
