@@ -34,12 +34,12 @@ class App extends React.Component {
     setRightDivision = (rightDivision) => {this.setState({rightDivision:rightDivision})};
     handleDateChange = (date)=> {this.setState({startDate:date})};
 
-    handleDateDecr(date) {
-        let tmpNextDayObject = this.dateUtil.getPrevtDayObject(date);
+    handleDateDecr(date, edgeDate) {
+        let tmpNextDayObject = this.dateUtil.getPrevDayObject(date);
         this.setState({startDate:tmpNextDayObject});
     };
     
-    handleDateIncr(date) {
+    handleDateIncr(date, edgeDate) {
         let tmpNextDayObject = this.dateUtil.getNextDayObject(date);
         this.setState({startDate:tmpNextDayObject})
     };
@@ -56,12 +56,12 @@ class App extends React.Component {
                 <div className="menu"> 
                     <div className="center_the_menu">
                         <button  onClick={()=>this.setState({startDate:this.seasonStartDate})}>Season Start</button>
-                        <button  onClick={()=>this.handleDateDecr(this.state.startDate)}>-</button>
+                        <button  onClick={()=>this.handleDateDecr(this.state.startDate, this.seasonStartDate)}>-</button>
                         <DatePicker className="date"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         /> 
-                        <button onClick={()=>this.handleDateIncr(this.state.startDate)}>+</button>
+                        <button onClick={()=>this.handleDateIncr(this.state.startDate, this.seasonEndDate)}>+</button>
                         <button onClick={()=>this.setState({startDate:this.seasonEndDate})}>Season End</button>
                     </div>
                 </div>
