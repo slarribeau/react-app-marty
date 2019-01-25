@@ -65,7 +65,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    border: 3px solid green; 
+    /* border: 3px solid green; */
   }
   .date_box {
     width:100%;
@@ -145,6 +145,7 @@
     .button_fill {
       /* This is used to shift the buttons to the left or right */
       width:0%;
+      display:hidden;
     }
   }
   

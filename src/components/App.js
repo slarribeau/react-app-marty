@@ -73,7 +73,7 @@ class App extends React.Component {
                         /> 
                         <button onClick={()=>this.handleDateIncr(this.state.menuDate, this.seasonEndDate)}>+</button>
                         <button onClick={()=>this.setState({menuDate:this.seasonEndDate})}>Season End</button>
-                        <div className="button_fill">&nbsp</div>
+                        <div className="button_fill">&nbsp;</div>
                     </div>
                 </div>
 
