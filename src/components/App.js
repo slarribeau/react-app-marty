@@ -145,8 +145,9 @@ class App extends React.Component {
 
                     <a href="https://www.instagram.com/slarribeau463" target="_blank">
                         <img className="social_icon" src={instagram} alt="Follow me on linked-in"></img>
-                    </a>     
-                    </div>      
+                    </a>    
+                    <div className="social_fill">&nbsp;</div> 
+                    </div>  
                 </div>
             </div>
 

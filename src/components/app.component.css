@@ -126,15 +126,19 @@
   }
 
   .social_icons {
-    /* margin: auto; True Center */
-    margin: 0 0 0 28%; /* Skewed center */
-    width:30%;
+    width:100%;
     text-align: center; /* children will be centered */
     /* border: 3px solid green; */
   }
 
   .social_icon {
     margin:0px 10px 0px 10px;
+  }
+
+  .social_fill {
+    /* This is used to shift the social icons to the left or right */
+    display:inline-block;
+    width:14%;
   }
   
   @media only screen and (max-width:800px) {
@@ -146,6 +150,11 @@
       /* This is used to shift the buttons to the left or right */
       width:0%;
       display:hidden;
+    }
+    .social_fill {
+      /* This is used to shift the social icons to the left or right */
+      display:hidden;
+      width:0%;
     }
   }
   
