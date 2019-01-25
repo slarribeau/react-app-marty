@@ -63,8 +63,7 @@ class App extends React.Component {
                 </div>
                 <div className="menu"> 
                     <div className="center_the_menu">
-                        <div className="left_button_set"></div>
-                        <button  style={{"margin":"0 0 0 -14%"}}onClick={()=>this.setState({menuDate:this.seasonStartDate})}>Season Start</button>
+                        <button  style={{}}onClick={()=>this.setState({menuDate:this.seasonStartDate})}>Season Start</button>
                         <button  onClick={()=>this.handleDateDecr(this.state.menuDate, this.seasonStartDate)}>-</button>
                         <DatePicker className="date"
                             selected={this.state.menuDate}
@@ -74,6 +73,7 @@ class App extends React.Component {
                         /> 
                         <button onClick={()=>this.handleDateIncr(this.state.menuDate, this.seasonEndDate)}>+</button>
                         <button onClick={()=>this.setState({menuDate:this.seasonEndDate})}>Season End</button>
+                        <div className="button_fill">&nbsp</div>
                     </div>
                 </div>
 
