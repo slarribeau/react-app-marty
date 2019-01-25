@@ -69,6 +69,13 @@
   .date_box {
     width:100%;
   }
+  .date {
+    width:90%;
+  }
+  .react-datepicker-wrapper {
+    width:80px;
+  }
+  
   .select_box_a {
     width:50%;
     float: left;
@@ -135,30 +142,15 @@
       width: 100%;
     }
     .center_the_menu {
-      border: 1px solid red; 
-      width:333px;
-    }
-    .date {
-      width:90%;
-    }
-    .react-datepicker-wrapper {
-      width:80px;
+      border: 1px solid green; 
+      width:350px;
     }
   }
   
   /* For mobile phones portrait mode: */
-  /*
   @media only screen and (max-width:500px) {
-    .menu {
-      border: 1px solid yellow; 
-      height: 100px;
-    }
-    .center_the_menu {
-      border: 1px solid white; 
-    }
-    .left-button, .mat-form-field{
-      border: 1px solid green; 
-      float:none;
-    }
+    /*buton {
+      font-size : 7px;
+    }*/
   }
-  */
+  
