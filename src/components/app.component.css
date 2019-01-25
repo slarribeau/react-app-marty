@@ -27,11 +27,8 @@
 
   .center_the_menu {
     margin: auto; /* True Center */
-    /*margin: 0 0 0 23%; /* Skewed center */
-    width: 400px;
     padding: 10px; 
-    /*text-align: center; /* children will be centered */
-     border: 3px solid #73AD21; 
+    text-align: center; /* children will be centered */
   }
 
   button {
@@ -75,7 +72,7 @@
   .react-datepicker-wrapper {
     width:80px;
   }
-  
+
   .select_box_a {
     width:50%;
     float: left;
@@ -140,10 +137,6 @@
     /* At 800 px (mobile landscape) we start to lose data in standings columns*/
     .left, .center, .right {
       width: 100%;
-    }
-    .center_the_menu {
-      border: 1px solid green; 
-      width:350px;
     }
   }
   
